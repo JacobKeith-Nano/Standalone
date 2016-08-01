@@ -1,0 +1,23 @@
+﻿Build started 4/22/2016 8:49:01 PM.
+     1>Project "C:\Users\GandalfTheWhite\Documents\Visual Studio 2013\Projects\StaticStuff\StaticStuff\StaticStuff.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt VignettingApp.cpp
+         VignettingApp.cpp
+     1>VignettingApp.cpp(49): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>VignettingApp.cpp(56): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>VignettingApp.cpp(80): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>VignettingApp.cpp(84): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>VignettingApp.cpp(104): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>VignettingApp.cpp(106): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>VignettingApp.cpp(107): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>VignettingApp.cpp(128): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>VignettingApp.cpp(130): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\GandalfTheWhite\Documents\Visual Studio 2013\Projects\StaticStuff\x64\Debug\StaticStuff.exe" /INCREMENTAL /NOLOGO opencv_ccalib300d.lib opencv_calib3d300d.lib opencv_core300d.lib opencv_cudaarithm300d.lib opencv_cudabgsegm300d.lib opencv_cudacodec300d.lib opencv_cudafeatures2d300d.lib opencv_cudafilters300d.lib opencv_cudaimgproc300d.lib opencv_cudalegacy300d.lib opencv_cudaobjdetect300d.lib opencv_cudaoptflow300d.lib opencv_cudastereo300d.lib opencv_cudawarping300d.lib opencv_cudev300d.lib opencv_features2d300d.lib opencv_flann300d.lib opencv_hal300d.lib opencv_highgui300d.lib opencv_imgcodecs300d.lib opencv_imgproc300d.lib opencv_ml300d.lib opencv_objdetect300d.lib opencv_photo300d.lib opencv_shape300d.lib opencv_stitching300d.lib opencv_superres300d.lib opencv_ts300d.lib opencv_video300d.lib opencv_videoio300d.lib opencv_videostab300d.lib opencv_bgsegm300d.lib opencv_bioinspired300d.lib opencv_datasets300d.lib opencv_face300d.lib opencv_latentsvm300d.lib opencv_line_descriptor300d.lib opencv_optflow300d.lib opencv_reg300d.lib opencv_rgbd300d.lib opencv_saliency300d.lib opencv_surface_matching300d.lib opencv_text300d.lib opencv_tracking300d.lib opencv_viz300d.lib opencv_xfeatures2d300d.lib opencv_ximgproc300d.lib opencv_xobjdetect300d.lib opencv_xphoto300d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\GandalfTheWhite\Documents\Visual Studio 2013\Projects\StaticStuff\x64\Debug\StaticStuff.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\GandalfTheWhite\Documents\Visual Studio 2013\Projects\StaticStuff\x64\Debug\StaticStuff.lib" /MACHINE:X64 x64\Debug\Test.obj
+         x64\Debug\VignettingApp.obj
+         StaticStuff.vcxproj -> C:\Users\GandalfTheWhite\Documents\Visual Studio 2013\Projects\StaticStuff\x64\Debug\StaticStuff.exe
+     1>Done Building Project "C:\Users\GandalfTheWhite\Documents\Visual Studio 2013\Projects\StaticStuff\StaticStuff\StaticStuff.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.48

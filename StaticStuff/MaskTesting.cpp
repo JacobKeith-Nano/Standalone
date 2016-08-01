@@ -29,12 +29,17 @@ void main()
     Mat GDS = 255 - imread(gdsPath, IMREAD_GRAYSCALE);
     Mat waveguides = 255 - imread(waveguidePath, IMREAD_GRAYSCALE);
 
+    
+
     double scaleFactor;
     cout << "Specify the scaling to be applied to the image to match the microscope images (0 if images are scaled manually): ";
     cin >> scaleFactor;
 
-    resize(GDS, GDS, Size(), scaleFactor, scaleFactor);
-    resize(waveguides, waveguides, Size(), scaleFactor, scaleFactor);
+    if (scaleFactor > 0)
+    {
+        resize(GDS, GDS, Size(), scaleFactor, scaleFactor);
+        resize(waveguides, waveguides, Size(), scaleFactor, scaleFactor);
+    }
 
     int rows, cols;
     cout << "Number of rows: ";
