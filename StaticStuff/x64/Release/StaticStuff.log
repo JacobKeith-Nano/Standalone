@@ -1,23 +1,15 @@
-﻿Build started 8/1/2016 11:46:31 AM.
-     1>Project "C:\Users\GandalfTheWhite\Documents\Visual Studio 2013\Projects\StaticStuff\StaticStuff\StaticStuff.vcxproj" on node 2 (Build target(s)).
+﻿Build started 8/1/2016 10:30:52 PM.
+     1>Project "C:\Dev\GDS\GDSMaskHelper\StaticStuff\StaticStuff.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /GL /D _MBCS /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc120.pdb" /Gd /TP /errorReport:prompt MaskTesting.cpp
          MaskTesting.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\GandalfTheWhite\Documents\Visual Studio 2013\Projects\StaticStuff\x64\Release\StaticStuff.exe" /NOLOGO opencv_ccalib300.lib opencv_calib3d300.lib opencv_core300.lib opencv_cudaarithm300.lib opencv_cudabgsegm300.lib opencv_cudacodec300.lib opencv_cudafeatures2d300.lib opencv_cudafilters300.lib opencv_cudaimgproc300.lib opencv_cudalegacy300.lib opencv_cudaobjdetect300.lib opencv_cudaoptflow300.lib opencv_cudastereo300.lib opencv_cudawarping300.lib opencv_cudev300.lib opencv_features2d300.lib opencv_flann300.lib opencv_hal300.lib opencv_highgui300.lib opencv_imgcodecs300.lib opencv_imgproc300.lib opencv_ml300.lib opencv_objdetect300.lib opencv_photo300.lib opencv_shape300.lib opencv_stitching300.lib opencv_superres300.lib opencv_ts300.lib opencv_video300.lib opencv_videoio300.lib opencv_videostab300.lib opencv_bgsegm300.lib opencv_bioinspired300.lib opencv_datasets300.lib opencv_face300.lib opencv_latentsvm300.lib opencv_line_descriptor300.lib opencv_optflow300.lib opencv_reg300.lib opencv_rgbd300.lib opencv_saliency300.lib opencv_surface_matching300.lib opencv_text300.lib opencv_tracking300.lib opencv_viz300.lib opencv_xfeatures2d300.lib opencv_ximgproc300.lib opencv_xobjdetect300.lib opencv_xphoto300.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\GandalfTheWhite\Documents\Visual Studio 2013\Projects\StaticStuff\x64\Release\StaticStuff.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\GandalfTheWhite\Documents\Visual Studio 2013\Projects\StaticStuff\x64\Release\StaticStuff.lib" /MACHINE:X64 x64\Release\LumentumMasking.obj
-         x64\Release\MacroGUI.obj
-         x64\Release\MaskTesting.obj
-         x64\Release\Mosaic.obj
-         x64\Release\NewScan.obj
-         x64\Release\Test.obj
-         x64\Release\Testing.obj
-         x64\Release\VignettingApp.obj
-         x64\Release\YAML_TEST.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Dev\GDS\GDSMaskHelper\x64\Release\StaticStuff.exe" /NOLOGO opencv_ccalib300.lib opencv_calib3d300.lib opencv_core300.lib opencv_cudaarithm300.lib opencv_cudabgsegm300.lib opencv_cudacodec300.lib opencv_cudafeatures2d300.lib opencv_cudafilters300.lib opencv_cudaimgproc300.lib opencv_cudalegacy300.lib opencv_cudaobjdetect300.lib opencv_cudaoptflow300.lib opencv_cudastereo300.lib opencv_cudawarping300.lib opencv_cudev300.lib opencv_features2d300.lib opencv_flann300.lib opencv_hal300.lib opencv_highgui300.lib opencv_imgcodecs300.lib opencv_imgproc300.lib opencv_ml300.lib opencv_objdetect300.lib opencv_photo300.lib opencv_shape300.lib opencv_stitching300.lib opencv_superres300.lib opencv_ts300.lib opencv_video300.lib opencv_videoio300.lib opencv_videostab300.lib opencv_bgsegm300.lib opencv_bioinspired300.lib opencv_datasets300.lib opencv_face300.lib opencv_latentsvm300.lib opencv_line_descriptor300.lib opencv_optflow300.lib opencv_reg300.lib opencv_rgbd300.lib opencv_saliency300.lib opencv_surface_matching300.lib opencv_text300.lib opencv_tracking300.lib opencv_viz300.lib opencv_xfeatures2d300.lib opencv_ximgproc300.lib opencv_xobjdetect300.lib opencv_xphoto300.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Dev\GDS\GDSMaskHelper\x64\Release\StaticStuff.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Dev\GDS\GDSMaskHelper\x64\Release\StaticStuff.lib" /MACHINE:X64 x64\Release\MaskTesting.obj
          Generating code
          Finished generating code
-         StaticStuff.vcxproj -> C:\Users\GandalfTheWhite\Documents\Visual Studio 2013\Projects\StaticStuff\x64\Release\StaticStuff.exe
-     1>Done Building Project "C:\Users\GandalfTheWhite\Documents\Visual Studio 2013\Projects\StaticStuff\StaticStuff\StaticStuff.vcxproj" (Build target(s)).
+         StaticStuff.vcxproj -> C:\Dev\GDS\GDSMaskHelper\x64\Release\StaticStuff.exe
+     1>Done Building Project "C:\Dev\GDS\GDSMaskHelper\StaticStuff\StaticStuff.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.06
+Time Elapsed 00:00:01.53

@@ -121,14 +121,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="MacroGUI.cpp" />
     <ClCompile Include="MaskTesting.cpp" />
-    <ClCompile Include="Mosaic.cpp" />
-    <ClCompile Include="NewScan.cpp" />
-    <ClCompile Include="Test.cpp" />
-    <ClCompile Include="Testing.cpp" />
-    <ClCompile Include="VignettingApp.cpp" />
-    <ClCompile Include="YAML_TEST.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
