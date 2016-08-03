@@ -19,21 +19,26 @@ string makeZeroLedString(int i)
 void main()
 {
     string gdsPath, waveguidePath;
-    
-    cout << "Provide the filename of the full GDS image: ";
-    cin >> gdsPath;
-
-    cout << "Provide the filename of the waveguide only image: ";
-    cin >> waveguidePath;
-
-    Mat GDS = 255 - imread(gdsPath, IMREAD_GRAYSCALE);
-    Mat waveguides = 255 - imread(waveguidePath, IMREAD_GRAYSCALE);
-
-    
-
     double scaleFactor;
-    cout << "Specify the scaling to be applied to the image to match the microscope images (0 if images are scaled manually): ";
-    cin >> scaleFactor;
+    int rows, cols;
+    string templateName;
+
+    
+    //cout << "Provide the filename of the full GDS image: ";
+    //cin >> gdsPath;
+    gdsPath = "GDS_Scaled_filled.png";
+    
+    //cout << "Provide the filename of the waveguide only image: ";
+    //cin >> waveguidePath;
+    waveguidePath = "Waveguides_Scaled.png";
+
+    Mat GDS =  imread(gdsPath, IMREAD_GRAYSCALE);
+    Mat waveguides = imread(waveguidePath, IMREAD_GRAYSCALE);
+
+    //cout << "Specify the scaling to be applied to the image to match the microscope images (0 if images are scaled manually): ";
+    //cin >> scaleFactor;
+    scaleFactor = 0; 
+    int cropPad =800;
 
     if (scaleFactor > 0)
     {
@@ -41,19 +46,21 @@ void main()
         resize(waveguides, waveguides, Size(), scaleFactor, scaleFactor);
     }
 
-    int rows, cols;
-    cout << "Number of rows: ";
-    cin >> rows;
-    cout << "Number of cols: ";
-    cin >> cols;
+    //cout << "Number of rows: ";
+    //cin >> rows;
+    rows = 20;
+
+    //cout << "Number of cols: ";
+    //cin >> cols;
+    cols = 6;
 
     int tiles = rows * cols;
 
-    string templateName;
-    cout << "Provide the prefix name of the templates: ";
-    cin >> templateName;
+    //cout << "Provide the prefix name of the templates: ";
+    //cin >> templateName;
+    templateName = "BPSG";
 
-    cout << "If region images are desired, create \"Regions\" subfolder here" << endl;
+    //cout << "If region images are desired, create \"Regions\" subfolder here" << endl;
 
     for (int t = 0; t < tiles; t++)
     {
@@ -68,7 +75,7 @@ void main()
         }
         cout << t << " " << r << " " << c << endl;
 
-        int cropPad = 1000;
+        
         int cropRow = max(0, red.rows * (r));
         int cropCol = max(0, red.cols * (c));
 
@@ -81,11 +88,16 @@ void main()
         cout << cropRow << " , " << cropCol  << endl;
 
         Mat result;
+        int dilation = 7;
         copyMakeBorder(croppedSection, croppedSection, cropPad, cropPad, cropPad, cropPad, BORDER_CONSTANT);
         copyMakeBorder(croppedWG, croppedWG, cropPad, cropPad, cropPad, cropPad, BORDER_CONSTANT);
         matchTemplate(croppedSection, red, result, CV_TM_CCORR_NORMED);
         //matchTemplate(croppedSection, red, result, CV_TM_CCOEFF_NORMED);
-        imwrite("Regions/" + templateName + "_" + makeZeroLedString(t+1) + "_region.png", croppedSection);
+        Mat regionDilated;
+        Size dilateSize = Size(dilation, dilation);
+        Mat structure = getStructuringElement(MORPH_RECT, dilateSize);
+        dilate(croppedWG, regionDilated, structure);
+        imwrite("Regions/" + templateName + "_" + makeZeroLedString(t + 1) + "_region.png", regionDilated);
 
 
         Point min, max;
@@ -96,6 +108,10 @@ void main()
 
         Mat matched = croppedSection(Rect(match + fix, match + Point(red.cols, red.rows)));
         Mat matchedWG = croppedWG(Rect(match + fix, match + Point(red.cols, red.rows)));
-        imwrite(templateName + "_" + makeZeroLedString(t+1) + "_mask.png", matchedWG);
+        Mat dilatedWG; 
+
+        dilate(matchedWG, dilatedWG, structure);
+
+        imwrite(templateName + "_" + makeZeroLedString(t+1) + "_mask.png", dilatedWG);
     }
 }
